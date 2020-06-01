@@ -10,7 +10,6 @@ body {
 }
 .carousel {
   background: #fff;
-  border: 2px solid #c058dc;
   border-radius: 5px;
   width: 100%;
   height: 300px;
@@ -65,22 +64,22 @@ section {
   background-repeat: no-repeat;
 }
 .sec{
-  background: url('./milky-way-2695569_1920.jpg');
+  background: url('./img/milky-way-2695569_1920.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 .third{
-  background: url('./photo-of-mountain-under-starry-night-sky-2670898.jpg');
+  background: url('./img/photo-of-mountain-under-starry-night-sky-2670898.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 .fourth{
-  background: url('./asteroid-4371514_1920.jpg');
+  background: url('./img/asteroid-4371514_1920.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 .fifth{
-  background: url('./planet-1721381.jpg');
+  background: url('./img/planet-1721381.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
