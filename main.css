@@ -1,25 +1,35 @@
 body {
-  background: #eee;
+  background: rgb(0, 7, 20);
 }
 .h5 {
   margin-bottom: 30px;
 }
-.container {
+.header{
+  height: 100vh;
+
+}
+.header__container {
   width: 80%;
   margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
 }
-.carousel {
+.header__carousel {
   background: #fff;
   border-radius: 5px;
   width: 100%;
-  height: 300px;
+  height: 70%;
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
-
   position: relative;
+  -webkit-box-shadow: -1px 0px 68px 0px rgba(181,186,199,1);
+-moz-box-shadow: -1px 0px 68px 0px rgba(181,186,199,1);
+box-shadow: -1px 0px 68px 0px rgba(181,186,199,1);
 }
-.slider {
+.header__slider {
   display: flex;
   height: 100%;
   width: 500%;
@@ -27,7 +37,7 @@ body {
   transition: all 0.5s;
 
 }
-section {
+.header__slide {
   flex-basis: 20%;
   flex-shrink: 0;
   display: flex;
@@ -35,51 +45,34 @@ section {
   align-items: center;
   font-size: 20px;
 }
-.controls button.next {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  color: #c058dc;
-}
-.controls button.prev {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  color: #c058dc;
-}
-.controls button i {
-  font-size: 50px;
-}
-.first{
-  background: url('https://source.unsplash.com/random');
+
+.header__slide--first{
+  background: url('./img/landscape-photo-of-mountain-with-polar-lights-1434608.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 100%;
 }
-.sec{
+.header__slide--sec{
   background: url('./img/milky-way-2695569_1920.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 100%;
 }
-.third{
-  background: url('./img/photo-of-mountain-under-starry-night-sky-2670898.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.fourth{
-  background: url('./img/asteroid-4371514_1920.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.fifth{
+.header__slide--third{
   background: url('./img/planet-1721381.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 100%;
+}
+.header__slide--fourth{
+  background: url('./img/aerial-view-atmosphere-clouds-cold-front-76969.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+.header__slide--fifth{
+  background: url('./img/planet-1721381.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100%;
 }

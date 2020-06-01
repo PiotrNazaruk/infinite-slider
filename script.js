@@ -1,55 +1,39 @@
-
-
 const slider = () => {
   const domElements = {
-    caruosel: document.querySelector(".carousel"),
-    slider: document.querySelector(".slider"),
-    prev: document.querySelector(".prev"),
-    next: document.querySelector(".next"),
+    caruosel: document.querySelector(".header__carousel"),
+    slider: document.querySelector(".header__slider"),
   };
 
   const interface = {
-    directionRight: "right",
-    directionLeft: "left",
     time: 3000,
-  }
+  };
 
   const autoPlay = () => {
-    const {caruosel,slider} =domElements;
-    let {direction,time}= interface;
-    setInterval(() => {
-      direction = "right";
-      caruosel.style.justifyContent = "flex-start";
-      slider.style.transform = "translate(-20%)";
-    }, time);
+    const { caruosel, slider } = domElements;
+    caruosel.style.justifyContent = "flex-start";
+    slider.style.transform = "translate(-20%)";
   };
-  const arrowControls =()=>{
-    const {next,prev,slider} = domElements;
-   
-  }
-  const transition = ()=>{
-    const {slider} = domElements;
-    let {direction} = interface;
-    slider.addEventListener('transitionend', ()=> {
-      // get the last element and append it to the front
-    
-      if (direction === "left") {
-       slider.prepend(slider.lastElementChild);
-      } else {
+
+  const transition = () => {
+    const { slider } = domElements;
+
+    slider.addEventListener(
+      "transitionend",
+      () => {
         slider.appendChild(slider.firstElementChild);
-      }
-    
-      slider.style.transition = 'none';
-      slider.style.transform = 'translate(0)';
-      setTimeout(() => {
-        slider.style.transition = 'all 0.5s';
-      })
-    }, false);
-  }
+        slider.style.transition = "none";
+        slider.style.transform = "translate(0)";
+        setTimeout(() => {
+          slider.style.transition = "all 0.7s";
+        });
+      },
+      false
+    );
+  };
 
   const init = () => {
-    autoPlay();
-    transition()
+    setInterval(autoPlay, interface.time);
+    transition();
   };
   init();
 };
